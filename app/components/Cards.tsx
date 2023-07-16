@@ -14,7 +14,7 @@ interface CardsProps {
 const Cards: React.FC<CardsProps> = ({ techName, desc, address }) => (
   <section className=" hover:text-amber-700">
     <article
-      className="cursor-pointer rounded-md border-2 border-slate-300 p-4 hover:border-orange-400"
+      className="cursor-pointer rounded-xl border-2 border-slate-300 p-4 hover:border-orange-400 md:rounded-md"
       onClick={() => {
         window.open(
           `${address}`,

@@ -79,7 +79,7 @@ body {
 }
 
 .black_btn {
-  @apply rounded-full border border-black bg-black px-5 py-1.5 text-sm text-white transition-all duration-300 ease-in-out hover:bg-white hover:text-black;
+  @apply rounded-full border border-black bg-black px-5 py-1.5 text-sm text-white transition-all duration-300 ease-in-out hover:bg-[#ffffffab] hover:text-black;
 }
 
 .head_text {
