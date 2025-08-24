@@ -1,6 +1,7 @@
-import React from 'react';
-import Cards from './Cards';
-import { Tech } from './CardsData';
+import React from "react";
+
+import Cards from "./Cards";
+import { Tech } from "./CardsData";
 
 const Features = () => (
   <article className="mt-14 flex flex-row flex-wrap justify-center gap-4">

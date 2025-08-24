@@ -1,9 +1,6 @@
-/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
+"use client";
 
-'use client';
-
-import React from 'react';
+import React from "react";
 
 interface CardsProps {
   techName: string;
@@ -12,21 +9,19 @@ interface CardsProps {
 }
 
 const Cards: React.FC<CardsProps> = ({ techName, desc, address }) => (
-  <section className=" hover:text-amber-700">
+  <section className="hover:text-amber-700">
     <article
       className="cursor-pointer rounded-xl border-2 border-slate-300 p-4 hover:border-orange-400 md:rounded-md"
       onClick={() => {
         window.open(
           `${address}`,
-          // eslint-disable-next-line prettier/prettier
-          '_blank',
+
+          "_blank"
         );
       }}
     >
       <div className="flex flex-row">
-        <h1 className="mb-2 pr-2 font-inter text-2xl font-medium">
-          {techName}
-        </h1>
+        <h1 className="mb-2 pr-2 font-sans text-2xl font-medium">{techName}</h1>
         <svg
           stroke="currentColor"
           fill="currentColor"
@@ -49,7 +44,7 @@ const Cards: React.FC<CardsProps> = ({ techName, desc, address }) => (
           />
         </svg>
       </div>
-      <p className="max-w-[21rem] font-satoshi text-lg md:min-h-[8.5rem] md:max-w-[15rem] lg:min-h-[6rem] lg:max-w-[21rem]">
+      <p className="max-w-[21rem] font-sans text-lg md:min-h-[8.5rem] md:max-w-[15rem] lg:min-h-[6rem] lg:max-w-[21rem]">
         {desc}
       </p>
     </article>

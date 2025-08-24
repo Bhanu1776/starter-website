@@ -1,6 +1,6 @@
 {
   "name": "@bhanu1776/nextjs-starter",
-  "version": "1.0.0",
+  "version": "3.5.0",
   "author": "bhanu1776",
   "license": "MIT",
   "bin": "./bin/cli.js",
@@ -8,58 +8,51 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "commit": "cz",
-    "prepare": "npx husky install"
-  },
-  "engines": {
-    "node": "22.x"
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write 'src/**/*.{ts,tsx,js,jsx,json,css,md}'",
+    "format:check": "prettier --check 'src/**/*.{ts,tsx,js,jsx,json,css,md}'",
+    "prepare": "husky"
   },
   "dependencies": {
-    "@types/node": "20.4.2",
-    "@types/react": "18.2.15",
-    "@types/react-dom": "18.2.7",
-    "@vercel/analytics": "^1.0.1",
-    "autoprefixer": "10.4.14",
-    "eslint": "8.45.0",
-    "eslint-config-next": "13.4.10",
-    "next": "13.4.10",
+    "@vercel/analytics": "^1.5.0",
+    "next": "15.5.0",
     "next-pwa": "^5.6.0",
-    "postcss": "8.4.26",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "tailwindcss": "3.3.3",
-    "tailwindcss-debug-screens": "^2.2.1",
-    "typescript": "5.1.6",
-    "vercel": "^31.0.3"
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^6.0.0",
-    "@typescript-eslint/parser": "^6.0.0",
-    "classnames": "^2.3.2",
-    "cz-git": "^1.7.0",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-airbnb-typescript": "^17.1.0",
-    "eslint-config-prettier": "^8.8.0",
-    "eslint-plugin-prettier": "^5.0.0",
-    "husky": "^8.0.3",
-    "prettier": "^3.0.0",
-    "prettier-plugin-tailwindcss": "^0.4.1"
-  },
-  "config": {
-    "commitizen": {
-      "path": "node_modules/cz-git",
-      "czConfig": ".cz-config.js"
-    }
+    "@eslint/eslintrc": "^3",
+    "@ianvs/prettier-plugin-sort-imports": "^4.6.2",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@typescript-eslint/parser": "^8.40.0",
+    "classnames": "^2.5.1",
+    "eslint": "^9",
+    "eslint-config-next": "15.5.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "eslint-plugin-react-hooks-extra": "^1.52.6",
+    "eslint-plugin-security": "^3.0.1",
+    "husky": "^9.1.7",
+    "prettier": "^3.6.2",
+    "prettier-plugin-tailwindcss": "^0.6.14",
+    "tailwindcss": "^4",
+    "tailwindcss-debug-screens": "^3.0.1",
+    "ts-plugin-sort-import-suggestions": "^1.0.4",
+    "tw-animate-css": "^1.3.7",
+    "typescript": "^5"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Bhanu1776/Nextjs13-Starter-Template"
+    "url": "git+https://github.com/Bhanu1776/Nextjs14-Starter-Template"
   },
   "publishConfig": {
     "@bhanu1776:registry": "https://npm.pkg.github.com"
   },
-  "homepage": "https://github.com/Bhanu1776/Nextjs13-Starter-Template#readme",
+  "homepage": "https://starter-website-sigma.vercel.app/",
   "keywords": [
     "react",
     "next",
@@ -73,6 +66,7 @@
     "prettier",
     "husky",
     "cz-git",
+    "PWA",
     "pnpm"
   ]
 }

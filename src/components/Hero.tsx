@@ -1,38 +1,35 @@
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-/* eslint-disable jsx-a11y/no-static-element-interactions */
+"use client";
 
-'use client';
+import { useState } from "react";
 
-import { useState } from 'react';
-
-const cmd1: string = 'npx @bhanu17/nextjs-starter my-app';
+const cmd1: string = "npx @bhanu17/nextjs-starter my-app";
 
 const Hero = () => {
-  const [Copied, setCopied] = useState('');
+  const [Copied, setCopied] = useState("");
 
   const handleCopy = (cmd: string) => {
     setCopied(cmd);
     navigator.clipboard.writeText(cmd);
-    setTimeout(() => setCopied(''), 3000);
+    setTimeout(() => setCopied(""), 3000);
   };
 
   return (
     <header className="flex w-full flex-col items-center justify-center">
       <nav className="mb-10 flex w-full items-center justify-between pt-3">
-        {/* <p className="font-inter text-2xl font-bold">Next</p> */}
+        {/* <p className="font-sans text-2xl font-bold">Next</p> */}
         <img
           src="Nextjs.png"
           alt="sumz_logo"
-          className="w-28 select-none object-contain"
+          className="w-28 object-contain select-none"
         />
 
         <button
           type="button"
           onClick={() =>
             window.open(
-              'https://github.com/Bhanu1776/Nextjs13-Starter-Template',
-              // eslint-disable-next-line prettier/prettier
-              '_blank',
+              "https://github.com/Bhanu1776/Nextjs13-Starter-Template",
+
+              "_blank"
             )
           }
           className="black_btn"
@@ -51,8 +48,8 @@ const Hero = () => {
       </h2>
 
       <div className="link_card mt-14 !bg-[#ffffffab]">
-        <p className="cursor-text select-all px-2 font-inter text-xs tracking-wider text-slate-900 md:text-lg">
-          <span className="select-none pr-4 text-zinc-500">$</span>
+        <p className="cursor-text px-2 font-sans text-xs tracking-wider text-slate-900 select-all md:text-lg">
+          <span className="pr-4 text-zinc-500 select-none">$</span>
           {cmd1}
         </p>
         <div className="copy_btn" onClick={() => handleCopy(cmd1)}>
